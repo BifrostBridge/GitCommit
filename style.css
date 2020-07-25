@@ -1,21 +1,28 @@
 body {
     margin: 0;
     padding: 0;
+    transition: .4s linear;
+    animation: body linear 4s infinite alternate;
 }
-input {
-    padding: 5px 20px;
-    font-size: 16px;
-    background: black;
-    color: #ffffff;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    border: 1px solid #000000;
-    box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.75);
-    margin-left: 10px;
-    transition: all .3s linear;
+@keyframes body {
+    0%{background-color: red;}
+    25%{background-color: chocolate;}
+    50%{background-color: blueviolet;}
+    75%{background-color: cornflowerblue;}
+    100%{background-color: blue;}
 }
-input:hover {
-    transform: rotate(360deg);
-    transition: all .3s linear;
+#box {
+    width: 100px;
+    height: 100px;
+    background-color: brown;
+    margin: 10px 0 0 10px;
+    animation: animate 4s linear 2s infinite alternate;
+    position: relative;
+    font-size: 20px;
+}
+@keyframes animate {
+    0% {background-color: burlywood; left: 0px; top: 0px; color: thistle;}
+    50%{background-color: yellow;left: 1000px; top: 0; color: tomato;}
+    75%{background-color: cornsilk; left: 0; top: 300px;}
+    100%{background-color: teal;left: 0px; top: 300px; color: blue;}
 }

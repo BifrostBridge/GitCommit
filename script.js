@@ -69,4 +69,3 @@ const box = new Box({
     size: 100,
     color: 'red'
 })
-console.log(box)
