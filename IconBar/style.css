@@ -1,0 +1,24 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+.icon__bar {
+    display: flex;
+    background-color: #555555;
+}
+.icon__bar > a {
+    width: 25%;
+    text-align: center;
+    font-size: 30px;
+    color: #ffffff;
+    padding: 15px 0 15px 0;
+    transition: .2s linear;
+}
+.icon__bar > a:hover {
+    color: rgb(47, 44, 46);
+    background-color: rgb(41, 136, 41);
+    transition: .2s linear;
+}
+.active {
+    background-color: rgb(41, 136, 41);
+}

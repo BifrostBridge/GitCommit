@@ -13,8 +13,6 @@ function argument(...args) {
 }
 const btn = document.getElementById('btn')
 const pi = document.getElementById('pi')
-a = 1
-
 const srv = {
     server: 'Apache',
     port: 2000,

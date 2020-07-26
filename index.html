@@ -1,16 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script1.js"></script>
 </head>
 <body>
-    <h2>Hello, world!</h2>
-    <button id="btn">Enter to increse fontsize</button>
-    <p id="pi">Hello, world!</p>
-    <script src="newScript.js"></script>
-    <div id="box">Kaskader</div>
+    <style>
+        form {
+            max-width: 300px;
+            height: auto;
+            border: 1px solid #000000;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px 20px;
+            margin-top: 20px;
+            color: #ffffff;
+            font-style: italic;
+            border-radius: 20px;
+        }
+    </style>
+    <form action="">
+        <label for="">Loggin:</label><br>   
+        <input type="text" value="1" placeholder="Loggin"><br>
+        <label for="">Password:</label><br>
+        <input type="password" placeholder="password">
+    </form>
+    <form action="">
+        <input type="radio" id="male" name="text" onclick="alert('Male')"><span>1</span><br>
+        <input type="radio" id="female" name="text" value="female" onclick="alert('Female')"><span>1</span>
+    </form>
 </body>
 </html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/iconMenu/style.css">
+</head>
+<body>
+    <p>Click on the Menu Icon to transform it to X:</p>
+    <div class="container" id="show">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+    <script>
+        function myFunction(x) {
+            x.classList.toggle("change")
+        }
+        const show = document.getElementById('show')
+        show.onclick = function() {
+            myFunction(this)
+        }
+    </script>
+</body>
+</html>
