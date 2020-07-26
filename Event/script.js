@@ -11,4 +11,5 @@ btn.onclick = function() {
     p.style.fontSize = '30px'
     p.style.transition = 'all 1s linear'
     p.style.textAlign = 'center'
+    p.style.scale = '3'
 }
