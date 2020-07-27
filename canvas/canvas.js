@@ -24,12 +24,58 @@ canvas.onclick = function(event) {
 // ctx.strokeStyle = 'red'
 // ctx.lineWidth = 3
 // ctx.stroke()
-for(let i = 0; i < 3; i++) {
-    let x = Math.random() * innerWidth
-    let y = Math.random() * innerHeight
-    let radius = Math.floor(Math.random()*100) + 1
-    ctx.beginPath()
-    ctx.lineWidth = 1
-    ctx.arc(x,y,radius,0,Math.PI * 2,true)
-    ctx.stroke()
+// for(let i = 0; i < 100; i++) {
+//     let x = Math.random() * width
+//     let y = Math.random() * height
+//     ctx.beginPath()
+//     ctx.lineWidth = 1
+//     ctx.arc(x,y,50,0,Math.PI * 2,true)
+//     ctx.stroke()
+// }
+
+console.log('Canvas')
+function Circle(x,y,dx,dy,radius) {
+    this.x = x
+    this.y = y
+    this.dx = dx
+    this.dy = dy
+    this.radius = radius    
+    this.draw = function() {
+        ctx.beginPath()
+        ctx.lineWidth = 10
+        ctx.strokeStyle = 'blue'
+        ctx.fillStyle = 'rgba(123,134,123,0.5)'
+        ctx.arc(this.x,this.y,this.radius,0,Math.PI * 2,true)
+        ctx.stroke()
+        ctx.fill()
+    }
+    this.update = function() {
+        if(this.x + this.radius > width || this.x - this.radius < 0) {
+            this.dx = -this.dx
+        }
+        if(this.y + this.radius > height || this.y - this.radius < 0) {
+            this.dy = -this.dy
+        }
+        this.x += this.dx
+        this.y += this.dy
+        this.draw()
+    }
 }
+var circleArray = []
+for(let i = 0; i < 10; i++) {
+    var x = Math.random() * (width - radius * 2) + radius
+    var y = Math.random() * (height - radius * 2) + radius
+    var dx = (Math.random() - 0.5) * 10
+    var dy = (Math.random() - 0.5) * 10
+    var radius = 50
+    circleArray.push(new Circle(x,y,dx,dy,radius))
+}
+console.log(circleArray)
+function animate() {
+    requestAnimationFrame(animate)
+    ctx.clearRect(0,0,width,height)
+    for(let i = 0; i < circleArray.length; i++) {
+        circleArray[i].update()
+    }
+}
+animate()
