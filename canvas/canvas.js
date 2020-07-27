@@ -43,7 +43,7 @@ window.addEventListener('mousemove',
         mouse.y = event.y
         console.log(mouse)
 })
-
+console.log(canvas)
 console.log('Canvas')
 function Circle(x,y,dx,dy,radius) {
     this.x = x
