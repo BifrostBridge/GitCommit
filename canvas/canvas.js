@@ -33,6 +33,17 @@ canvas.onclick = function(event) {
 //     ctx.stroke()
 // }
 
+const mouse = {
+    x: undefined,
+    y: undefined
+}
+window.addEventListener('mousemove',
+    function(event){
+        mouse.x = event.x
+        mouse.y = event.y
+        console.log(mouse)
+})
+
 console.log('Canvas')
 function Circle(x,y,dx,dy,radius) {
     this.x = x
@@ -42,9 +53,9 @@ function Circle(x,y,dx,dy,radius) {
     this.radius = radius    
     this.draw = function() {
         ctx.beginPath()
-        ctx.lineWidth = 10
+        ctx.lineWidth = 2
         ctx.strokeStyle = 'blue'
-        ctx.fillStyle = 'rgba(123,134,123,0.5)'
+        ctx.fillStyle = 'black'
         ctx.arc(this.x,this.y,this.radius,0,Math.PI * 2,true)
         ctx.stroke()
         ctx.fill()
@@ -58,11 +69,20 @@ function Circle(x,y,dx,dy,radius) {
         }
         this.x += this.dx
         this.y += this.dy
+        
+
+            if(mouse.x - this.x < 50 && mouse.x - this.x > -50) {
+                this.radius += 1
+        }
+
+
         this.draw()
+
+        //interactivyty
     }
 }
 var circleArray = []
-for(let i = 0; i < 10; i++) {
+for(let i = 0; i < 50; i++) {
     var x = Math.random() * (width - radius * 2) + radius
     var y = Math.random() * (height - radius * 2) + radius
     var dx = (Math.random() - 0.5) * 10
