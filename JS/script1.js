@@ -1,10 +1,8 @@
-class Box {
+class A {
     constructor(name) {
         this.name = name
     }
-    hello() {
-        console.log('Hello, world!', this.name)
+    voice() {
+        console.log('Hello', this.name)
     }
 }
-const box = new Box('David')
-box.hello()
