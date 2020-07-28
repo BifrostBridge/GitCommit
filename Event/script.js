@@ -6,3 +6,4 @@ btn_1.onclick = function() {
     box1.style.transition = 'all .5s linear'
     box1.style.lineHeight = '5.5'
 }
+console.log(1)
