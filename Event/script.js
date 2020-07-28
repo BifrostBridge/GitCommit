@@ -1,7 +1,8 @@
-const body = document.body
-body.onclick = function(event) {
-    console.log(`X:`,event.clientX)
-    console.log(`Y:`, event.clientY)
+const btn_1 = document.getElementById('btn_1')
+const box1 = document.getElementById('box1')
+
+btn_1.onclick = function() {
+    box1.style.background = 'red'
+    box1.style.transition = 'all .5s linear'
+    box1.style.lineHeight = '5.5'
 }
-const btn = document.getElementById('btn')
-const p = document.getElementById('Paragraph')
