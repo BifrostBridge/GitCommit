@@ -3,17 +3,4 @@ body {
     margin: 0;
 }
 /* animation: name duration timing-function delay iteration-count direction fill-mode;*/
-.content {
-    display: flex;
-    justify-content: space-around;
-    padding: 200px 0 0 0;
-    text-align: center;
-}
-#box1 {
-    background: black;
-    width: 100px;
-    height: 100px;
-    border: 1px solid #000000;
-    text-align: center;
-    margin-top: 20px;
-}
+ /* Dropup Button */
