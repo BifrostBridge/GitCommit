@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <script src="https://kit.fontawesome.com/36f8e671a9.js" crossorigin="anonymous"></script>
+    <style>
+        .container {
+            position: relative;
+            width: 50%;
+        }
+        .img {
+            display: block;
+            width: 100%;
+            height: 400px;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: #008CBA;
+        }
+        .container:hover .overlay {
+            opacity: 1;
+        }
+        .text {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 45%;
+            left: 40%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Fade in Overlay</h2>
+    <p>Hover over the img and text</p>
+    <div class="container">
+        <img src="/repo/free-nature-psd-file-27-layers-free-download-nature-backgrounds-for-photoshop-png-500_707.jpg"
+            width="200" height="200" alt="img" class="img">
+            <div class="overlay">
+                <div class="text">Hello, world!<br><i class="fab fa-google-plus-g"></i></div>
+            </div>
+    </div>
+
+    <script src="/repo/script.js"></script>
+</body>
+
+</html>
