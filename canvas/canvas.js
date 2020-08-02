@@ -7,6 +7,7 @@ canvas.onclick = function(event) {
     console.log(`X:`,event.clientX)
     console.log(`Y:`,event.clientY)
 }
+console.log(1)
 // ctx.fillStyle = 'rgba(22,11,120,0.9)'
 // ctx.fillRect(100,100,100,100)
 // ctx.fillStyle = 'rgba(255,0,0,0.8)'
@@ -15,7 +16,6 @@ canvas.onclick = function(event) {
 // ctx.fillRect(400,50,100,100)
 // ctx.fillStyle = 'rgba(204, 102, 255,0.9)'
 // ctx.fillRect(1114,284,100,100)
-
 // ctx.beginPath()
 // ctx.moveTo(100,600)
 // ctx.lineTo(600,600)

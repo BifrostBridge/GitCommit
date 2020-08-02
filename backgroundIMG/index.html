@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
     <script src="https://kit.fontawesome.com/36f8e671a9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/backgroundIMG/style.css">
     <style>
         .container {
             position: relative;
@@ -36,20 +37,30 @@
             left: 40%;
             text-align: center;
         }
+        form {
+            display: flex;  
+            flex-direction: column;
+            align-items: flex-start;
+        }
     </style>
 </head>
 <body>
+    <input type="button" name="" id="button">
     <h2>Fade in Overlay</h2>
     <p>Hover over the img and text</p>
     <div class="container">
-        <img src="/repo/free-nature-psd-file-27-layers-free-download-nature-backgrounds-for-photoshop-png-500_707.jpg"
+        <img src="/backgroundIMG/free-nature-psd-file-27-layers-free-download-nature-backgrounds-for-photoshop-png-500_707.jpg"
             width="200" height="200" alt="img" class="img">
             <div class="overlay">
                 <div class="text">Hello, world!<br><i class="fab fa-google-plus-g"></i></div>
             </div>
-    </div>
+        </div>
 
-    <script src="/repo/script.js"></script>
+        <form action="">
+            <input type="text" class="loggin" placeholder="Enter loggin...">
+            <input type="password">
+        </form>
+    <script src="/backgroundIMG/script.js"></script>
 </body>
 
 </html>
