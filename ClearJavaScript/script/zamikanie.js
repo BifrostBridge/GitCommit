@@ -17,7 +17,6 @@
 // console.log(addOne(12))
 // console.log(addOne(13))
 // console.log(addOne(14))
-
 function urlGenerator(domain) {
     return function(url) {
         return `https://${url}.${domain}`
