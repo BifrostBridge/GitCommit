@@ -1,10 +1,14 @@
 const text = document.getElementById('text')
+const  ul = document.querySelector('ul')
 const result = document.getElementById('result')
-text.oninput = function() {
-    result.innerHTML = this.value
-}
-text.onblur = function () {
-    this.style.borderColor = ''
+text.addEventListener('click', toggle)
+function toggle() {
+    if(ul.style.display === 'none') {
+        ul.style.display = 'block'
+    }
+    else {
+        ul.style.display = 'none'
+    }
 }
 
 // text.onkeypress = function(event) {
