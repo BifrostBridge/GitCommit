@@ -1,0 +1,24 @@
+.title {
+    position: absolute;
+    top: 0;
+    left: 100px;
+    cursor: pointer;
+    z-index: 10;
+    font-family: monospace;
+    font-size: 24px;
+    font-weight: 700;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation: title 3s linear 2s infinite alternate;
+    transition: all 1s linear;
+}
+.title::before {
+    content: "<h2>";
+}
+.title::after {
+    content: "<h2/>";
+}
+@keyframes title {
+    0%{color: green;}
+    50%{color: blue;}
+    100%{color: cadetblue;}
+}
