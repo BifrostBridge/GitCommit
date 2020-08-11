@@ -10,30 +10,29 @@ function random(min, max) {
   return num;
 }
 
-
-function Ball(x, y, velX, velY, color, size) {
+function Ball(x, y, vectorX, vectorY, color, size) {
   this.x = x;
   this.y = y;
-  this.velX = velX;
-  this.velY = velY;
+  this.vectorX = vectorX;
+  this.vectorY = vectorY;
   this.color = color;
   this.size = size;
 
   this.draw = function () {
     context.beginPath();
     context.fillStyle = this.color;
-    context.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+    context.arc(this.x, this.y, this.size, 0, Math.PI * 2);
     context.fill();
   }
   this.update = function() {
     if(this.x + this.size > width || this.x - this.size < 0) {
-        this.velX = -(this.velX);
+        this.vectorX = -(this.vectorX);
       }
     if(this.y + this.size > height || this.y - this.size < 0) {
-        this.velY = -this.velY
+        this.vectorY = -(this.vectorY)
     }
-    this.x += this.velX;
-    this.y += this.velY;
+    this.x += this.vectorX;
+    this.y += this.vectorY;
   }
   this.detect = function() {
     for(let j = 0; j < balls.length; j++) {
@@ -50,16 +49,14 @@ function Ball(x, y, velX, velY, color, size) {
   }
 }
 
-// define ball collision detection
 
-
-// define array to store balls and populate it
 
 let balls = [];
 
+
 while(balls.length < 100) {
   const size = random(10,20);
-  let ball = new Ball(
+  var ball = new Ball(
     random(0 + size,width - size),
     random(0 + size,height - size),
     random(-7,7),
@@ -70,7 +67,7 @@ while(balls.length < 100) {
   balls.push(ball);
 }
 
-// define loop that keeps drawing the scene constantly
+
 
 function loop() {
   context.fillStyle = 'rgba(0,0,0,0.25)';
