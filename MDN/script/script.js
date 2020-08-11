@@ -1,36 +1,3 @@
-const person = {
-    name: ['Bob', 'Smith'],
-    age: 32,
-    gender: 'Male',
-    interess: ['music', 'skiing'],
-    bio: function() {
-        console.log(this.name[0] + ' ' + this.name[1] + ' is ' + this.age + ' years old.He likes ' + this.interess[0] + ' and ' + this.interess[1] + '.')
-    },
-    greetings: function () {
-        console.log(`Hi! I'm ${this.name[0]}.` )
-    },
-    works: {
-        webDev: {
-            f: 'frontEnd',
-            b: 'BackEnd'
-        },
-    }
-}
-const groun =  {
-    name: 'John',
-    secondName: 'Ripper',
-    prof: 'Programer',
-    showMessage: function(job,phone) {
-        console.group(`Info about ${this.name}`)
-        console.log(`Name is a ${this.name}`)
-        console.log(`SecondName is a ${this.secondName}`)
-        console.log(`Job is ${job}`)
-        console.log(`Phone is ${phone}`)
-        console.log(`Prof is a, ${this.prof}`)
-        console.groupEnd()
-    },
-}
-
 function Person(first,last,age,gender,interest) {
     this.name = {
         first: first,
@@ -47,17 +14,34 @@ function Person(first,last,age,gender,interest) {
         console.log('Hi my name is a' + this.name.first)
     }
 }
-var person1 = new Person('David','Shevchenko',0,'Male',['Footbool','BasketBoll'])
-var person2 = new Person('Larisa','Ovsienko','47','Female',['Doctor','ReadBook'])
+Person.prototype.greeting = function() {
+    console.log('Hi!', this.name.first)
+}
+
+
+var person1 = new Person('David','Shevchenko',24,'Male',['Footbool','BasketBoll'])
+var person2 = new Person('Igant','Davidos',23,'Female',['Doctor','ReadBook'])
+
+console.log(person1)
+///////////////////////////////////////////////////////////////////////////////////////
+
+
+///////////////////////////////////////////////////////////////////////////////////////
 Person.prototype.firewall = function() {
     console.log(this.name + 'has left the building.Bye for now!')
 }
+
+//////////////////////////////////////////////////////////////////////////////////////////
 Object.prototype.pow2 = function(x){
     return `Квадрат 2 в степени ${x} = ${Math.pow(2,x)}`
 }
-function showMessage() {
-    
+Object.prototype.z = function(x) {
+    return document.body.innerHTML = x
 }
+Object.prototype.sqrt = function(n) {
+    return Math.sqrt(n)
+}
+///////////////////////////////////////////////////////////////////////////////////////
 function InfoAboutMe(name,age,prof) {
     this.name = name
     this.age = age
@@ -68,3 +52,24 @@ function InfoAboutMe(name,age,prof) {
         console.log(this.name,this.age,this.prof)
     }
 }
+///////////////////////////////////////////////////////////////////////////////////////
+function showInfo(name,age,bool) {
+    this.name = name
+    this.age = age
+    this.bool = bool
+
+    this.showInfo = function()  {
+        console.log(`${this.name}, ${this.age}, ${this.bool}`);
+    }
+}
+function randomeNumber(x,y,z) {
+    this.x = x
+    this.y = y
+    this.z = z
+}
+let x = Math.random()
+let y = Math.random()
+let z = Math.random()
+const randome = new randomeNumber(x,y,z)
+console.log(randome)
+///////////////////////////////////////////////////////////////////////////////////////
