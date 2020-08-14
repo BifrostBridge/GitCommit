@@ -10,25 +10,25 @@ function random(min, max) {
   return num;
 }
 
-function Ball(x, y, vectorX, vectorY, color, size) {
+function Ball(x, y, vectorX, vectorY, color, radius) {
   this.x = x;
   this.y = y;
   this.vectorX = vectorX;
   this.vectorY = vectorY;
   this.color = color;
-  this.size = size;
+  this.radius = radius;
 
   this.draw = function () {
     context.beginPath();
     context.fillStyle = this.color;
-    context.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+    context.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
     context.fill();
   }
   this.update = function() {
-    if(this.x + this.size > width || this.x - this.size < 0) {
+    if(this.x + this.radius > width || this.x - this.radius < 0) {
         this.vectorX = -(this.vectorX);
       }
-    if(this.y + this.size > height || this.y - this.size < 0) {
+    if(this.y + this.radius > height || this.y - this.radius < 0) {
         this.vectorY = -(this.vectorY)
     }
     this.x += this.vectorX;
@@ -51,11 +51,11 @@ function Ball(x, y, vectorX, vectorY, color, size) {
 
 
 
-let balls = [];
+let balls = []
 
 
-while(balls.length < 100) {
-  const size = random(10,20);
+while(balls.length < 10) {
+  const size = random(10,50);
   var ball = new Ball(
     random(0 + size,width - size),
     random(0 + size,height - size),

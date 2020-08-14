@@ -19,7 +19,7 @@ Person.prototype.greeting = function() {
 }
 
 
-var person1 = new Person('David','Shevchenko',24,'Male',['Footbool','BasketBoll'])
+var person1 = new Person('David','Davids',24,'Male',['Footbool','BasketBoll'])
 var person2 = new Person('Igant','Davidos',23,'Female',['Doctor','ReadBook'])
 
 console.log(person1)
@@ -41,35 +41,3 @@ Object.prototype.z = function(x) {
 Object.prototype.sqrt = function(n) {
     return Math.sqrt(n)
 }
-///////////////////////////////////////////////////////////////////////////////////////
-function InfoAboutMe(name,age,prof) {
-    this.name = name
-    this.age = age
-    this.prof = prof
-
-    this.group = function() {
-        console.log('This method about you')
-        console.log(this.name,this.age,this.prof)
-    }
-}
-///////////////////////////////////////////////////////////////////////////////////////
-function showInfo(name,age,bool) {
-    this.name = name
-    this.age = age
-    this.bool = bool
-
-    this.showInfo = function()  {
-        console.log(`${this.name}, ${this.age}, ${this.bool}`);
-    }
-}
-function randomeNumber(x,y,z) {
-    this.x = x
-    this.y = y
-    this.z = z
-}
-let x = Math.random()
-let y = Math.random()
-let z = Math.random()
-const randome = new randomeNumber(x,y,z)
-console.log(randome)
-///////////////////////////////////////////////////////////////////////////////////////

@@ -1,6 +1,5 @@
 const btn = document.getElementById('btn')
 const hide = document.getElementById('hide')
-hide.style.display = 'none'
 function toggle(selector) {
     if(selector.style.display === 'none') {
         selector.style.display = 'inline-block'
@@ -9,7 +8,7 @@ function toggle(selector) {
         selector.style.display = 'none'
     }
 }
-
-btn.addEventListener('click',function() {
-    toggle(hide)
-})
+Object.prototype.Pi = 3.14;
+for(let i = 0; i < 300; i++) {
+    console.log('Number:', i)
+}
