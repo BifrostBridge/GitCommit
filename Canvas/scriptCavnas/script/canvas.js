@@ -71,8 +71,15 @@ function Circle(x,y,dx,dy,radius) {
         this.y += this.dy
         
 
-            if(mouse.x - this.x < 50 && mouse.x - this.x > -50) {
+        //Interactivity
+        if(mouse.x - this.x < 50 && mouse.x - this.x > -50 && mouse.y - this.y  < 50 && mouse.y - this.y > -50) {
+            this.radius += 1
+            if(this.radius < 40) {
                 this.radius += 1
+            }
+        }
+        else if(this.radius > 2) {
+            this.radius -= 1
         }
 
 
@@ -82,7 +89,7 @@ function Circle(x,y,dx,dy,radius) {
     }
 }
 var circleArray = []
-for(let i = 0; i < 50; i++) {
+for(let i = 0; i < 200; i++) {
     var x = Math.random() * (width - radius * 2) + radius
     var y = Math.random() * (height - radius * 2) + radius
     var dx = (Math.random() - 0.5) * 10

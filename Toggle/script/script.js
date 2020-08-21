@@ -1,14 +1,19 @@
 const btn = document.getElementById('btn')
-const hide = document.getElementById('hide')
-function toggle(selector) {
-    if(selector.style.display === 'none') {
-        selector.style.display = 'inline-block'
+const toggle = document.getElementById('toggle')
+const innerDiv = document.getElementById('innerDiv')
+const uls = document.getElementById('uls')
+toggle.style.display = 'none'
+function showAndHide($selector) {
+    if($selector.style.display === 'none') {
+        $selector.style.display = 'block'
     }
     else {
-        selector.style.display = 'none'
+        $selector.style.display = 'none'
     }
 }
-Object.prototype.Pi = 3.14;
-for(let i = 0; i < 300; i++) {
-    console.log('Number:', i)
-}
+innerDiv.addEventListener('click', () => {
+    showAndHide(uls)
+})
+btn.addEventListener('click',() => {
+    showAndHide(toggle)
+})

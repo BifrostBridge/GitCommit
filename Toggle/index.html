@@ -5,14 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    body {
+        overflow: hidden;
+        height: 100vh;
+        background: linear-gradient(to top, #fefcea, #f1da36) no-repeat center;
+        background-size: cover;
+    }
+    .inner__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center ;
+    }
+    ul {
+        display: flex;
+        list-style: none;
+        padding-right: 10px;
+    }
+    ul li {
+        padding-right: 20px;
+    }
+</style>
 <body>
-    <ul>
-        <li>Hello</li>
-        <li>Wold</li>
-        <li>adsasda</li>
-        <li>sdfsdf</li>
-        <li>sfdfdsf</li>
-    </ul>
+    <header>
+        <div class="inner__header">
+            <div class="header__logo">Logo</div>
+            <div class="menu">
+                <ul>
+                    <li>Menu</li>
+                    <li>About</li>
+                    <li>FAQ</li>
+                    <li>We in a social
+                        <ul style="display: block;">
+                            <li>Hello</li>
+                            <li>Hello</li>
+                            <li>Hello</li>
+                            <li>Hello</li>
+                            <li>Hello</li>
+                        </ul>
+                    </li>
+                    <li>FAQ</li>
+                </ul>
+            </div>
+        </div>
+    </header>
     <script src="/script/script.js"></script>
 </body>
 </html>
